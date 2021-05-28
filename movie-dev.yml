@@ -20,4 +20,4 @@ eureka:
 
     #电影购票微服务注册到url指定的Eureka服务器上(2台Eureka服务器)
     service-url:
-      defaultZone: http://192.168.41.1:8888/eureka,http://192.168.41.129:8888/eureka
+      defaultZone: http://192.168.41.1:8888/eureka
