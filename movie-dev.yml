@@ -5,6 +5,16 @@ server:
 spring:
   application:
     name: microservice-movie
+  #zipkin服务的url
+  zipkin:
+    base-url: http://192.168.41.1:9041
+    #zipkin服务是建筑在web服务基础之上的,不是Kafka
+    sender:
+      type: web
+    #链路跟踪的样板概率是100%
+    sleuth:
+      sampler:
+        probability: 1
 
 #集群版Eureak服务器客户端(电影微服务)配置
 eureka:
