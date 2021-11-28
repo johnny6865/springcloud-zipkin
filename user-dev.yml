@@ -13,7 +13,6 @@ spring:
     url: jdbc:mysql://192.168.41.39:3306/jsd20129?useSSL=false&characterEncoding=utf-8
     username: root
     password: 123456
-
   #声明jpa实施正向工程
   jpa:
     #显示sql语句
@@ -22,6 +21,16 @@ spring:
     generate-ddl: true
     #底层数据库是MySQL数据库
     database: mysql
+  #zipkin服务的url
+  zipkin:
+    base-url: http://192.168.41.1:9041
+    #zipkin服务是建筑在web服务基础之上的,不是Kafka
+    sender:
+      type: web
+    #链路跟踪的样板概率是100%
+    sleuth:
+      sampler:
+        probability: 1
 
 #集群版eureka服务器客户端的配置
 eureka:
@@ -30,7 +39,7 @@ eureka:
     register-with-eureka: true
     #向eureka服务器索要信息
     fetch-registry: true
-    #用户微服务注册到url指定的Eureka服务器上(2台Eureka服务器)
+    #用户微服务注册到url指定的Eureka服务器上
     service-url:
       defaultZone: http://192.168.41.1:8888/eureka
 
