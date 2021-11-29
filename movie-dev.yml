@@ -11,10 +11,10 @@ spring:
     #zipkin服务是建筑在web服务基础之上的,不是Kafka
     sender:
       type: web
-    #链路跟踪的样板概率是100%
-    sleuth:
-      sampler:
-        probability: 1
+  #链路跟踪的样板概率是100%
+  sleuth:
+    sampler:
+      probability: 1
 
 #集群版Eureak服务器客户端(电影微服务)配置
 eureka:
