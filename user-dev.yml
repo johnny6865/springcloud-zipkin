@@ -8,8 +8,8 @@ spring:
     name: microservice-user
   #声明数据源
   datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    #driver-class-name: com.mysql.jdbc.Driver
+    #driver-class-name: com.mysql.cj.jdbc.Driver
+    driver-class-name: com.mysql.jdbc.Driver
     url: jdbc:mysql://192.168.41.39:3306/jsd20129?useSSL=false&characterEncoding=utf-8
     username: root
     password: 123456
